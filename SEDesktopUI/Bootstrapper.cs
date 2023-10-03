@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using SEDesktopUI.Helpers;
 using SEDesktopUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace SEDesktopUI
 {
@@ -16,6 +18,13 @@ namespace SEDesktopUI
         public Bootstrapper()
         {
             Initialize();
+
+            // Helpers/PasswordBoxHelper
+            ConventionManager.AddElementConvention<PasswordBox>(
+            PasswordBoxHelper.BoundPasswordProperty,
+            "Password",
+            "PasswordChanged");
+
         }
 
         protected override void Configure()
