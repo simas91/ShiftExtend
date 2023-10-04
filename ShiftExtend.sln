@@ -11,9 +11,40 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{B3086B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{70D94F87-ED79-4E08-A2A2-C4FCDAFF7137}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEApi", "SEApi\SEApi.csproj", "{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEDataManager.Library", "SEDataManager.Library\SEDataManager.Library.csproj", "{E7922480-F56B-4BC4-B7F6-7CB65997856D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SEData", "SEData\SEData.sqlproj", "{A87DA2BB-06AB-418A-883C-870F4E9221B5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7922480-F56B-4BC4-B7F6-7CB65997856D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7922480-F56B-4BC4-B7F6-7CB65997856D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7922480-F56B-4BC4-B7F6-7CB65997856D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7922480-F56B-4BC4-B7F6-7CB65997856D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3513BE50-C9DA-4FCF-8195-0B00B04B93E6} = {41C931F7-3033-42AB-96E8-149AC78CEAFA}
+		{E7922480-F56B-4BC4-B7F6-7CB65997856D} = {41C931F7-3033-42AB-96E8-149AC78CEAFA}
+		{A87DA2BB-06AB-418A-883C-870F4E9221B5} = {5E195699-1A07-4D8B-90F1-D867EB1B3038}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC738A4F-15ED-4CA2-B2BD-0689752F945F}
