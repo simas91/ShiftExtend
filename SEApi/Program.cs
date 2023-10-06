@@ -26,6 +26,7 @@ namespace SEApi
 
             builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             builder.Services.AddTransient<IUserData, UserData>();
+            builder.Services.AddTransient<IProductData, ProductData>();
 
             //Swagger implementation + app.UserSwagger below
             builder.Services.AddSwaggerGen(setup =>
