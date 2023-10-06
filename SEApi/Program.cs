@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using SEApi.Data;
 using SEDataManager.Library.DataAccess;
 using SEDataManager.Library.Internal;
@@ -26,6 +27,19 @@ namespace SEApi
             builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             builder.Services.AddTransient<IUserData, UserData>();
 
+            //Swagger implementation + app.UserSwagger below
+            builder.Services.AddSwaggerGen(setup =>
+            {
+                setup.SwaggerDoc(
+                    "v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Shift Extended API",
+                        Version = "v1"
+                    });
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -47,6 +61,13 @@ namespace SEApi
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            //Swagger implementation
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "SExtend API v1");
+            });
 
             app.MapControllerRoute(
                 name: "default",

@@ -11,6 +11,9 @@ using System.Security.Claims;
 
 namespace SEApi.Controllers
 {
+    // [controller] means ClassNameController
+    // In this cace UserController becomes User
+    // full url will be /api/User/whatever...
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
@@ -35,8 +38,6 @@ namespace SEApi.Controllers
         {
             // gets userId from the user who is loged in
             // passing userId by method is security issue
-
-            // Old way: string userId = RequestContext.Principal.Identity.GetUserId();
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             return _userData.GetUserById(userId).First();
