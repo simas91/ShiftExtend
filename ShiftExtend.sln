@@ -19,6 +19,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SEData", "SEData\SEData.sql
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal", "Portal\Portal.csproj", "{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.Library", "UI.Library\UI.Library.csproj", "{88403EE7-3DD0-46DC-A288-ADC4365ADABE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88403EE7-3DD0-46DC-A288-ADC4365ADABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88403EE7-3DD0-46DC-A288-ADC4365ADABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88403EE7-3DD0-46DC-A288-ADC4365ADABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88403EE7-3DD0-46DC-A288-ADC4365ADABE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

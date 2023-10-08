@@ -18,12 +18,12 @@ namespace SEDataManager.Library.DataAccess
         }
         public List<UserModel> GetUserById(string Id)
         {
-            var output = _sql.LoadData<UserModel, dynamic>("dbo.spUser_Lookup", new { Id }, "ESData");
+            var output = _sql.LoadData<UserModel, dynamic>("dbo.spUser_Lookup", new { Id }, "SEData");
             return output;
         }
         public void CreateUser(UserModel user)
         {
-            _sql.SaveData("dbo.spUser_Insert", new { user.Id, user.FirstName, user.LastName, user.EmailAddress }, "ESData");
+            _sql.SaveData("dbo.spUser_Insert", new { user.Id, user.FirstName, user.LastName, user.EmailAddress }, "SEData");
         }
     }
 }

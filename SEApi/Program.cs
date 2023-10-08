@@ -15,6 +15,7 @@ namespace SEApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Cors - cross origin requests
             // For portal app - Gives permision to other web apps to our api
             builder.Services.AddCors(policy =>
             {
@@ -59,8 +60,7 @@ namespace SEApi
                 }
                 );
 
-            //// Can't login straight to API with this
-            //builder.Services.AddAuthorization();
+            builder.Services.AddAuthorization();
 
             //Swagger implementation + app.UserSwagger below
             builder.Services.AddSwaggerGen(setup =>
