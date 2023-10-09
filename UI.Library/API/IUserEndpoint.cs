@@ -7,5 +7,7 @@ namespace UI.Library.API
         IAPIHelper _apiHelper { get; }
 
         Task CreateUser(CreateUserModel model);
+
+        Task<UserModel> GetAll();
     }
 }

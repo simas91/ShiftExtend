@@ -1,0 +1,33 @@
+﻿@page "/profile"
+@inject IUserEndpoint UserEndpoint
+@inject IConfiguration config
+
+<PageTitle>Products</PageTitle>
+
+<h3>Products</h3>
+
+<div class="container-fluid">
+    @if (profile is null)
+    {
+        <div class="row">
+            <p>No profiles have been loaded.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <p>@profile.FirstName</p>
+        </div>
+    }
+</div>
+
+@code {
+    private UserModel? profile;
+    private string? api;
+
+    protected override async Task OnInitializedAsync()
+    {
+        api = config.GetValue<string>("apiImage");
+        profile = await UserEndpoint.GetAll();
+    }
+}

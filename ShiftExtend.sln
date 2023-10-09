@@ -9,17 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{5E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{B3086BAB-1363-427F-B4A1-07D30AFB278D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{70D94F87-ED79-4E08-A2A2-C4FCDAFF7137}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEApi", "SEApi\SEApi.csproj", "{3513BE50-C9DA-4FCF-8195-0B00B04B93E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEDataManager.Library", "SEDataManager.Library\SEDataManager.Library.csproj", "{E7922480-F56B-4BC4-B7F6-7CB65997856D}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SEData", "SEData\SEData.sqlproj", "{A87DA2BB-06AB-418A-883C-870F4E9221B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal", "Portal\Portal.csproj", "{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal", "Portal\Portal.csproj", "{0F4E62BF-B65A-483D-BDF5-79D6CAADD851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.Library", "UI.Library\UI.Library.csproj", "{88403EE7-3DD0-46DC-A288-ADC4365ADABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.Library", "UI.Library\UI.Library.csproj", "{88403EE7-3DD0-46DC-A288-ADC4365ADABE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
