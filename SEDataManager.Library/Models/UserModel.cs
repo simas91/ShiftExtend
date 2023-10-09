@@ -13,5 +13,7 @@ namespace SEDataManager.Library.Models
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public DateTime CreatedDate { get; set; }
+        public bool OP { get; set; }
+        public bool RT { get; set; }
     }
 }

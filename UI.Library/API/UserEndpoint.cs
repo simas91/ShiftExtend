@@ -36,7 +36,7 @@ namespace UI.Library.API
 
         public async Task<UserModel> GetAll()
         {
-            using (HttpResponseMessage response = await _apiHelper.ApiClient.GetAsync("/api/Profile"))
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.GetAsync("/api/User"))
             {
                 if (response.IsSuccessStatusCode)
                 {
