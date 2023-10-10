@@ -1,0 +1,86 @@
+﻿@page "/overtimes"
+@inject IOvertimeEndpoint OvertimeEndpoint
+@inject IConfiguration config
+
+
+<h1>List of Overtimes</h1>
+
+<br />
+<h2>Available overtimes:</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>OP</th>
+            <th>CB</th>
+            <th>RT</th>
+            <th>Pack</th>
+            <th>FirstAider</th>
+            <th>FireWarden</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(overtimeList != null)
+        {
+            @foreach (var ot in overtimeList)
+            {
+                <tr>
+                    <td>@ot.OvertimeDate.ToString("dd/MM/yyyy dddd")</td>
+                    <td>@ot.StartTime.ToString(@"hh\:mm")</td>
+                    <td>@ot.EndTime.ToString(@"hh\:mm")</td>
+                    <td><input type="checkbox" disabled checked="@ot.OP" /></td>
+                    <td><input type="checkbox" disabled checked="@ot.CB" /></td>
+                    <td><input type="checkbox" disabled checked="@ot.RT" /></td>
+                    <td><input type="checkbox" disabled checked="@ot.Pack" /></td>
+                    <td><input type="checkbox" disabled checked="@ot.FirstAider" /></td>
+                    <td><input type="checkbox" disabled checked="@ot.FireWarden" /></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+@code {
+    private List<OvertimeModel>? overtimeList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        overtimeList = await OvertimeEndpoint.GetAll();
+    }
+}
+
+
+@* @page "/overtimes"
+@inject IOvertimeEndpoint OvertimeEndpoint
+@inject IConfiguration config
+
+<PageTitle>Products</PageTitle>
+
+<h3>Products</h3>
+
+<div class="container-fluid">
+    @if (profile is null)
+    {
+        <div class="row">
+            <p>No profiles have been loaded.</p>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <p>@profile[0].OvertimeDate</p>
+        </div>
+    }
+</div>
+
+@code {
+    private List<OvertimeModel>? profile;
+
+    protected override async Task OnInitializedAsync()
+    {
+        profile = await OvertimeEndpoint.GetAll();
+    }
+} *@

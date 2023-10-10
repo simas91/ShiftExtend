@@ -16,13 +16,15 @@
     else
     {
         <div class="row">
-            <p>@profile.Id</p>
             <p>@profile.FirstName</p>
             <p>@profile.LastName</p>
             <p>@profile.EmailAddress</p>
-            <p>@profile.CreatedDate</p>
             <p>@profile.OP</p>
             <p>@profile.RT</p>
+            <p>@profile.CB</p>
+            <p>@profile.Pack</p>
+            <p>@profile.FirstAider</p>
+            <p>@profile.FireWarden</p>
         </div>
     }
 </div>
@@ -33,7 +35,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        api = config.GetValue<string>("apiImage");
         profile = await UserEndpoint.GetAll();
     }
 }

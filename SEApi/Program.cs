@@ -39,6 +39,7 @@ namespace SEApi
             builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             builder.Services.AddTransient<IUserData, UserData>();
             builder.Services.AddTransient<IProductData, ProductData>();
+            builder.Services.AddTransient<IOvertimeData, OvertimeData>();
 
             // Authentication
             builder.Services.AddAuthentication(options =>
