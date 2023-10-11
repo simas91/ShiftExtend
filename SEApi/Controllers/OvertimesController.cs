@@ -21,5 +21,11 @@ namespace SEApi.Controllers
         {
             return _overtime.GetAllOvertimes();
         }
+
+        [HttpPost]
+        public void Post(OvertimeModel model)
+        {
+            _overtime.AddOvertime(model);
+        }
     }
 }

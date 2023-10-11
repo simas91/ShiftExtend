@@ -31,5 +31,20 @@ namespace UI.Library.API
                 }
             }
         }
+
+        public async Task PostOvertime(OvertimeModel model)
+        {
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/Overtimes", model))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    // Log successful call
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }

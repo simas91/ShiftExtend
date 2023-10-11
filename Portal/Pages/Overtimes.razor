@@ -17,8 +17,6 @@
             <th>CB</th>
             <th>RT</th>
             <th>Pack</th>
-            <th>FirstAider</th>
-            <th>FireWarden</th>
         </tr>
     </thead>
     <tbody>
@@ -26,7 +24,7 @@
         {
             @foreach (var ot in overtimeList)
             {
-                <tr>
+                @* <tr>
                     <td>@ot.OvertimeDate.ToString("dd/MM/yyyy dddd")</td>
                     <td>@ot.StartTime.ToString(@"hh\:mm")</td>
                     <td>@ot.EndTime.ToString(@"hh\:mm")</td>
@@ -34,9 +32,7 @@
                     <td><input type="checkbox" disabled checked="@ot.CB" /></td>
                     <td><input type="checkbox" disabled checked="@ot.RT" /></td>
                     <td><input type="checkbox" disabled checked="@ot.Pack" /></td>
-                    <td><input type="checkbox" disabled checked="@ot.FirstAider" /></td>
-                    <td><input type="checkbox" disabled checked="@ot.FireWarden" /></td>
-                </tr>
+                </tr> *@
             }
         }
     </tbody>

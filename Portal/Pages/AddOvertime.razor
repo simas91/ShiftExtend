@@ -1,0 +1,57 @@
+﻿@page "/addovertime"
+@inject IOvertimeEndpoint OvertimeEndpoint
+@inject NavigationManager NavManager
+
+<h3>Create Overtime</h3>
+
+@if (string.IsNullOrWhiteSpace(errorMessage) == false)
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+
+<EditForm Model="@model" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="form-group row">
+        <label for="op" class="col-md-2 col-form-label">OP:</label>
+        <div class="col-md-10">
+            <input type="checkbox" id="op" class="form-check-input" @bind="model.OP" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="overtimedate" class="col-md-2 col-form-label">Date:</label>
+        <div class="col-md-10">
+            <input type="date" id="overtimedate" class="form-control" @bind="model.OvertimeDate" />
+        </div>
+    </div>
+
+
+    <div class="col-md-12 text-right">
+        <button type="submit" class="btn btn-success">Create Account</button>
+    </div>
+
+</EditForm>
+
+@code {
+    OvertimeModel model = new();
+    string? errorMessage;
+
+    private async Task OnValidSubmit()
+    {
+        errorMessage = "";
+
+        try
+        {
+            await OvertimeEndpoint.PostOvertime(model);
+
+            errorMessage = "Success";
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+    }
+}

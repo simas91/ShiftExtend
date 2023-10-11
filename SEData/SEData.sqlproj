@@ -70,6 +70,8 @@
     <Build Include="dbo\Tables\Overtimes.sql" />
     <Build Include="dbo\Tables\OvertimeBookings.sql" />
     <Build Include="dbo\Stored Procedures\spOvertimes_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spOvertimes_AddOvertime.sql" />
+    <Build Include="dbo\Stored Procedures\spOvertimes_Test.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\SEData.publish.xml" />
