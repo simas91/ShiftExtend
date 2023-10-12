@@ -28,6 +28,13 @@
         </div>
     </div>
 
+    <div class="form-group row">
+        <label for="starttime" class="col-md-2 col-form-label">Start Time:</label>
+        <div class="col-md-10">
+            <input type="time" id="starttime" class="form-control" @bind="start"/>
+        </div>
+    </div>
+
 
     <div class="col-md-12 text-right">
         <button type="submit" class="btn btn-success">Create Account</button>
@@ -38,13 +45,17 @@
 @code {
     OvertimeModel model = new();
     string? errorMessage;
+    TimeOnly? start;
+    DateOnly dateNow = DateOnly.FromDateTime(DateTime.Now);
 
     private async Task OnValidSubmit()
     {
+
         errorMessage = "";
 
         try
         {
+            model.StartTime = TimeSpan.Parse(start.ToString());
             await OvertimeEndpoint.PostOvertime(model);
 
             errorMessage = "Success";

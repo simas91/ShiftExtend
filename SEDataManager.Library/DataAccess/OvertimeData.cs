@@ -2,6 +2,7 @@
 using SEDataManager.Library.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -31,7 +32,7 @@ namespace SEDataManager.Library.DataAccess
 
         public void AddOvertime(OvertimeModel model)
         {
-            _sql.SaveData("dbo.spOvertimes_Test", new {model.OvertimeDate, model.OP}, "SEData");
+            _sql.SaveData("dbo.spOvertimes_Test", new {model.OvertimeDate, model.StartTime, model.OP}, "SEData");
         }
     }
 }

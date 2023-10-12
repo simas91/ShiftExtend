@@ -9,7 +9,7 @@ namespace UI.Library.Models
     public class OvertimeModel
     {
         public int? Id { get; set; }
-        public DateTime? OvertimeDate { get; set; }
+        public DateTime? OvertimeDate { get; set; } = DateTime.Now;
         public TimeSpan? StartTime { get; set; }
         public TimeSpan? EndTime { get; set; }
         public bool OP { get; set; }
